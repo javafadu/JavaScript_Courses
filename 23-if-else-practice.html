@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="txtPrice">
+    <button onclick="calculate()" id="btnResult">Calculate</button>
+    <h3 id="result"></h3>
+
+
+
+    <script>
+        function calculate() {
+            let price = document.querySelector("#txtPrice").value;
+            let discount = 5;
+
+            if(price > 500) {
+                discount = 10;
+            } 
+            
+
+            document.querySelector("#result").innerHTML=`$${price*1-discount}`;
+        }
+    </script>
+</body>
+</html>
