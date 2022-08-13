@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    
+  </head>
+  <body>
+
+    <button onclick="setUserInfo()">Click me</button>
+
+    <h3 id="result"></h3>
+
+
+
+    <script>
+      
+      const user1 = {
+        name: "Ali",
+        age:21,
+        salary:25000,
+        phone: {
+            gsm:"3242342342",
+            line:"45345345"
+        }
+      }
+      const user2 = {
+        name: "ayse",
+        age:21
+
+      }
+
+      function setUserInfo() {
+        const newSalary = user2.salary*1.15;
+        
+        const phone = user2?.phone?.gsm;
+        console.log(`Dear ${user2.name} new salary is : ${newSalary}`);
+        // ? : optional : eger yoksa hata degil bos dondurur
+      }
+    </script>
+  </body>
+</html>

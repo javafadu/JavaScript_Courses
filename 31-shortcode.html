@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let price = 123;
+        price > 50 && price <200 && message();
+        // && searches next false;
+
+        price>300 || (price=price*2);
+        console.log(price);
+        // price =   price || !isNaN(price) || 0;
+        // || searches next true;
+
+
+        function message() {
+            alert("Hello")
+        }
+
+    </script>
+</body>
+
+</html>
