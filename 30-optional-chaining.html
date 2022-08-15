@@ -36,9 +36,22 @@
       function setUserInfo() {
         const newSalary = user2.salary*1.15;
         
-        const phone = user2?.phone?.gsm;
+        
+        // old version:
+        /* 
+        if(user2 && user2.phone && user2.salary) {
+            documemt.querySelector(".gsm").innerHTML = user2.phone.gsm;
+        } else {
+          documemt.querySelector(".gsm").innerHTML = "no phone";
+        }
+        */
+
+        // new version
+         const phone = user2?.phone?.gsm;
+        // user2 there is no phone so no exception with ?
+        
         console.log(`Dear ${user2.name} new salary is : ${newSalary}`);
-        // ? : optional : eger yoksa hata degil bos dondurur
+        // ? : optional : if there is no element no stop return undefined
       }
     </script>
   </body>

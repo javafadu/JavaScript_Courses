@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button onclick="areaCalculation()">Click me</button>
+    <button onclick="areaCalculation(3)">Click me</button>
+    <button onclick="areaCalculation(5,7)">Click me</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+
+    
+    function areaCalculation(a,b) {
+
+    // (a ?? 0) : if a is null or undefined use right side else use a
+
+        const result = (a ?? 0) * (b ?? 0);
+        document.querySelector("#result").innerText = result;
+    }
+
+
+    </script>
+</body>
+</html>
