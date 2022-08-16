@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding:1rem;
+            background-color:azure;
+            width: 40%;
+
+        }
+        .container input, .container button{
+            padding:0.5rem;
+            font-size: 1.2rem;
+        }
+        .container label{
+            font-size: 1.3rem;
+            margin-right: 0.6rem;
+        }
+        .container #msg{
+            margin-top:1rem;
+
+        }
+        .green {
+            background-color:green;
+        }
+        .red {
+            color: white;
+            background-color: red;
+        }
+        #msg {
+            width:400px;
+            padding:2rem;
+        
+        }
+    </style>
+</head>
+<body>
+
+  <div class="container">
+    <input type="number" name="age" id="age">
+    <input type="radio" name="gender" id="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female">
+    <label for="female">Female</label>
+    <button onclick="statu()">Check Military Status</button>
+    <div id="msg"></div>
+  </div> 
+    
+<script src="app2.js"></script>
+
+</body>
+</html>
