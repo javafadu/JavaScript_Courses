@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num" placeholder="Enter A Number to Check Prime or Not">
+    <button onclick="onCalculateClick()">Calculate Age</button>
+    <h4 id="result"></h4>
+
+    <script>
+
+        function onCalculateClick() {
+            let num = document.querySelector("#num").value;
+            document.querySelector("#result").innerHTML =isPrime(num);
+        }
+
+
+        function isPrime(num) { // returns boolean
+            if (num <= 1) return false; // negatives
+            if (num % 2 == 0 && num > 2) return false; // even numbers
+            const s = Math.sqrt(num); // store the square to loop faster
+            for (let i = 3; i <= s; i += 2) { // start from 3, stop at the square, increment in twos
+                if (num % i === 0) return false; // modulo shows a divisor was found
+            }
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>

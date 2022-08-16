@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 1.5rem;
+            margin: 1.5rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <form>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price of Product</label>
+            <input type="number" class="form-control" id="price">
+        </div>
+        <div class="mb-3">
+            <label for="vat" class="form-label">V.A.T Rate</label>
+            <input type="number" class="form-control" id="vat">
+        </div>
+        <div class="mb-3">
+            <label for="discount" class="form-label">Discount Rate</label>
+            <input type="number" class="form-control" id="discount">
+        </div>
+
+        <button type="button" class="btn btn-outline-danger" onclick="onCalculateClick()">Calculate</button>
+    </form>
+
+    <div class="msg"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script>
+
+
+
+        const calculatePrice = (price, vat, discount) => {
+
+            // Check1: given numbers via input number or not
+            if (isNaN(price) || isNaN(vat) || isNaN(discount)) return;
+
+            if (discount <= 0) vat = 0;
+            if (price > 1500) discount += 10;
+
+
+            let result = (price + price * vat / 100 - price * discount / 100);
+            return result;
+
+        };
+
+        function onCalculateClick() {
+            let price = document.querySelector("#price").value;
+            let vat = document.querySelector("#vat").value;
+            let discount = document.querySelector("#discount").value;
+        
+
+            let total = calculatePrice(price, vat, discount);
+            document.querySelector("#msg").innerText = `Total Price : ${total}`;
+
+        };
+
+
+    </script>
+</body>
+
+</html>

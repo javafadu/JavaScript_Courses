@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="txtYear" placeholder="Enter Birth Year">
+        <button onclick="onCalculateClick()">Calculate Age</button>
+        <h4 id="result"></h4>
+
+    <script>
+        function onCalculateClick() {
+            const birthYear = document.querySelector("#txtYear").value;
+            document.querySelector("#result").innerHTML = getAge(birthYear);
+
+
+        }
+
+        function getAge(year) {
+            // check1 : control the given age is number or not
+            year = year*1 ? Number(year) : year; // if year is not a number
+
+            // check2: control the given year is less than this year or not
+            const dateTime = new Date();
+            const currentYear = dateTime.getFullYear();
+            if(year>currentYear) return;
+
+            const age = dateTime.getFullYear() - year;
+
+            return age;
+        }
+
+    </script>
+</body>
+</html>
