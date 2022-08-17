@@ -13,6 +13,9 @@
             padding: 1.5rem;
             margin: 1.5rem;
         }
+        #msg{
+            margin-top:1rem;
+        }
     </style>
 
 </head>
@@ -34,10 +37,10 @@
             <input type="number" class="form-control" id="discount">
         </div>
 
-        <button type="button" class="btn btn-outline-danger" onclick="onCalculateClick()">Calculate</button>
+        <button type="button" class="btn btn-outline-danger" onclick="onCalculateClick(price,vat,discount)">Calculate</button>
     </form>
 
-    <div class="msg"></div>
+    <div id="msg"></div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -47,28 +50,31 @@
 
 
 
-        const calculatePrice = (price, vat, discount) => {
+        const calculatePrice = (p, v, d) => {
 
-            // Check1: given numbers via input number or not
-            if (isNaN(price) || isNaN(vat) || isNaN(discount)) return;
-
-            if (discount <= 0) vat = 0;
-            if (price > 1500) discount += 10;
+            // if (d <= 0) v = 0;
+            if (p > 1500) d += 10;
 
 
-            let result = (price + price * vat / 100 - price * discount / 100);
+            let result = (p + p * v / 100 - p * d / 100);
+        
+            console.log(result);
             return result;
 
         };
 
-        function onCalculateClick() {
-            let price = document.querySelector("#price").value;
-            let vat = document.querySelector("#vat").value;
-            let discount = document.querySelector("#discount").value;
+        function onCalculateClick(price,vat,discount) {
+
+            price = price.value*1 ? Number(price.value) : 0;
+            vat = vat.value*1 ? Number(vat.value) : 0;
+            discount = discount.value*1 ? Number(discount.value) : 0;
+            let message = document.querySelector("#msg");
         
+            console.log(price+vat+discount);
 
             let total = calculatePrice(price, vat, discount);
-            document.querySelector("#msg").innerText = `Total Price : ${total}`;
+            message.innerText=`Total price : ${total} `;
+            
 
         };
 

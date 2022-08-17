@@ -45,14 +45,22 @@
         crossorigin="anonymous"></script>
     <script>
 
+        // 1- Function Scope :
+        // 2- Global Scope :
+        // 3- Block Scope : not valid for var, only valid for let and const
+
+        // if in block there is var variable, it become a function scope.
+
         // if a variable is defined as instance , each method gets instance variable as default.
         // if a variable is defined  
 
+        // Global scope variables:
         let z = 15;
         var m = 12;
-        g=33; // Javascript consider it is a global
+        g=33; // Javascript consider it is a global and type is var
 
         const test1 = () => {
+            // function variable
             let x = 40;
             console.log(`x variable : ${x}`);
             console.log(`z variable : ${z}`);
@@ -64,6 +72,7 @@
             var m = 23;
 
             if(x>20) {
+                // Block variable
                 let y=15;
                 y+=10;
             }
