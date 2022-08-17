@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button onclick="onClick1()">Click 1</button>
     <button id="btn2">Click 2</button>
     <button id="btn3">Click 3</button>
+    <button id="btn4">Click 4</button>
+    <button id="btn5">Click 5</button>
+    <button id="btn6">Click 6</button>
 
     <script>
         // EVENT HANDLERS
@@ -21,15 +26,33 @@
         }
         // EVENT LISTENERS
         // function isimlerinden sonra () kullanmiyoruz hemen calistirmasin diye
-        document.querySelector("#btn2").onclick= onClick2;
+        document.querySelector("#btn2").onclick = onClick2;
 
 
         // Option3: 
-       
-        document.querySelector("#btn3").onclick=  function () {
+        document.querySelector("#btn3").onclick = function () {
             alert("Button3 is clicked");
         };
 
+        // Option4:
+        document.querySelector("#btn4").onclick = () => {
+            alert("Button4 is clicked");
+        };
+
+        // Option5:
+        const onClick5 = () => {
+            alert("Button5 is clicked");
+        }
+        document.querySelector("#btn5").addEventListener("click", onClick5);
+
+
+        // Option6:
+        document.querySelector("#btn6").addEventListener("click", (e)=> {
+            console.log(e)
+            alert("Button6 is clicked");
+        });
+
     </script>
 </body>
+
 </html>

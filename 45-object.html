@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        const car = {
+            id: "123",
+            brand: "Mercedes",
+            model: "S500",
+            color: "blue",
+            year: 2020,
+            driver: {
+                name: "Ali",
+                birtYear : 1980
+            }
+        };
+
+        const bus = {};
+
+        console.log(car);
+        console.log(typeof(car));
+        console.log(typeof(model));
+        car.year=2022;
+        console.log(car);
+        console.log(car.driver.name);
+
+        if(bus) {
+            console.log("test1");
+        } else {
+            console.log("test2")
+        }
+        
+        // Check the object is empty or not :
+        console.log(Object.keys(car).length);
+        console.log(Object.keys(bus).length);
+
+
+    </script>
+</body>
+</html>
