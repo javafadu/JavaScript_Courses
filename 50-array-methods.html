@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        const meyveler = ["Apple", "Pear", "Banana", "Kiwi"];
+        console.log(meyveler);
+
+        meyveler.pop();  // delete last one
+        console.log(meyveler);
+
+        meyveler.push("Pineapple"); // add element at last
+        console.log(meyveler);
+
+        meyveler.shift(); // delete first one
+        console.log(meyveler);
+
+        meyveler.unshift("Strawberry"); // insert element at first
+        console.log(meyveler);
+
+        
+        meyveler.reverse(); // sort reverse (index order)
+        console.log(meyveler);
+
+        meyveler.sort(); // sort from a to z
+        console.log(meyveler);
+
+        meyveler.splice(1,0,"Cherry"); // insert into from [1], delete 0 element
+        console.log(meyveler);
+
+        meyveler.splice(2,2); // from [2], delete 2 element
+        console.log(meyveler);
+
+        meyveler.splice(1,1,"Orange", "Watermelon"); // from [2], delete 2 element
+        console.log(meyveler);
+
+        meyveler.splice(0,meyveler.length); // delete all elements
+        console.log(meyveler);
+
+    </script>
+</body>
+
+</html>

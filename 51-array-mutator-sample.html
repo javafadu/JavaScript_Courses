@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <input type="text" id="txtCity" /><button id="btnAddCity">
+          Add City
+        </button>
+      </div>
+      <div style="margin-top:20px">
+        <button id="btnSort">Sort</button>
+        <button id="btnReverse">Reverse</button>
+        <button id="btnRemoveFirst">Remove First</button>
+        <button id="btnRemoveLast">Remove Last</button>
+        <button id="btnRemoveAll">Remove All</button>
+        <button id="btnMix">Mix</button>
+      </div>
+      <ul id="cityList">
+      </ul>
+
+
+    <script>
+
+const cities = ["Ankara", "Izmir", "Istanbul", "Sinop"];
+document.querySelector("#btnSort").addEventListener("click", ()=> {
+    cities.sort();
+    loadList();
+});
+document.querySelector("#btnReverse").addEventListener("click", ()=> {
+    cities.reverse();
+    loadList();
+});
+document.querySelector("#btnRemoveFirst").addEventListener("click", ()=> {
+    cities.shift();
+    loadList();
+});
+document.querySelector("#btnRemoveLast").addEventListener("click", ()=> {
+    cities.pop();
+    loadList();
+});
+document.querySelector("#btnRemoveAll").addEventListener("click", ()=> {
+    cities.splice(0, cities.length);
+    loadList();
+});
+document.querySelector("#btnAddCity").addEventListener("click", ()=> {
+    const city = document.querySelector("#txtCity").value;
+    if(!city || cities.includes(city)) return;
+
+    cities.push(city);
+    
+    loadList();
+});
+
+
+document.querySelector("#btnMix").addEventListener("click", ()=> {
+    var citiesMix = [];
+    let randomCity="";
+    
+    for(let i=0;i<cities.length;i++) {
+
+        randomCity = cities[Math.floor(Math.random() * cities.length)];
+        console.log(randomCity);
+        if(citiesMix.includes(randomCity)) {
+            i--;}
+            else {
+                citiesMix.push(randomCity);
+            }
+    } console.log(citiesMix);
+    cities.length=0;
+    cities.push.apply(cities,citiesMix);
+
+    loadList();
+});
+
+const loadList = () => {
+  let html = "";
+  for (let i = 0; i < cities.length; i++) {
+    html += `<li>${cities[i]}</li>`;
+  }
+  document.querySelector("#cityList").innerHTML = html;
+};
+loadList();
+
+
+
+    </script>
+</body>
+</html>
