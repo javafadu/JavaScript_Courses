@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     
+    <script>
+      const animals = ["fil", "kuş", "deve", "kuş", "fare", "kedi", "kuş"];
+      console.log(animals);
+
+      console.log(animals.includes("fil"));
+      console.log(animals.includes("Fil"));
 
 
-<script>
+      console.log(animals.join());
+      console.log(animals.join(""));
+      console.log(animals.join("-"));
 
-const animals = ["elephant", "bird", "camel", "mouse", "cat"];
+      console.log(animals.slice(2));
+      console.log(animals.slice(2,4));
 
-animals.include("elephant");
+      console.log(animals.toString());
 
+      console.log(animals.indexOf("kuş"));
+      console.log(animals.lastIndexOf("kuş"));
+      console.log(animals.lastIndexOf("at"));
 
-</script>
-
-</body>
+    </script>
+  </body>
 </html>
