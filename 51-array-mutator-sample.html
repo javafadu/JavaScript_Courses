@@ -73,7 +73,8 @@ document.querySelector("#btnMix").addEventListener("click", ()=> {
             }
     } console.log(citiesMix);
     cities.length=0;
-    cities.push.apply(cities,citiesMix);
+    // cities.push.apply(cities,citiesMix);
+    cities.splice(0,0, ...citiesMix);
 
     loadList();
 });
