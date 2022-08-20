@@ -8,6 +8,10 @@ const loadCountries = () => {
   }
 
   document.querySelector("#ddlCountries").innerHTML = options;
+  document.querySelector("#totalArea").innerHTML = countries.reduce(
+    (totalArea, country) => totalArea + country.area,
+    0
+  ).toFixed(2);
 };
 
 const getCountry = (id) => {
@@ -20,14 +24,25 @@ const getCountry = (id) => {
 document.querySelector("#ddlCountries").addEventListener("change", (e)=>{
   console.log(e.target.value);
   const country = getCountry(e.target.value);
-  const currency = Object.getOwnPropertyNames(country.currencies);
-  const language = Object.values(country.languages);
+  
 
   document.querySelector("#details tr:nth-child(1) td").innerHTML = country.capital;
-  document.querySelector("#details tr:nth-child(2) td").innerHTML = currency;
-  document.querySelector("#details tr:nth-child(3) td").innerHTML = language;
+  document.querySelector("#details tr:nth-child(2) td").innerHTML = Object.values(country.currencies).map(item=>item.name).join("-");
+  document.querySelector("#details tr:nth-child(3) td").innerHTML = Object.values(country.languages).join("-");
 
 });
+
+// CALCULATE TOTAL AREA
+let areas = [];
+for (let country of countries) {
+  areas.push(country.area);
+}
+console.log(areas);
+let totalArea=areas.reduce((toplam,x) => toplam+x,0);
+console.log("Total Area: "+totalArea);
+document.querySelector("#totalArea").innerText = `Total Area : ${totalArea} `;
+
+
 
 loadCountries();
 

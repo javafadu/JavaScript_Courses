@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+
+const numbers = [-123,23,543,33,123,-234,332];
+
+// FOR LOOP (CLASSIC WAY)
+let total=0;
+for (let i = 0; i < numbers.length; i++) {
+    total+=numbers[i];
+}
+console.log(total);
+
+
+// REDUCE
+const t = numbers.reduce( (total, x) => total + x, 0 );
+console.log(t);
+
+// create total variable and assign it as 0
+// each iteration get array element and add into the total
+// reduce method returns total and assign it to t
+
+
+// REDUCE EXAMPLE
+const salaries = [2000, 2500, 5500, 10000, 1000, 1500];
+
+const totalSalary = salaries
+.filter( (salary)=>salary<3000) // filter salaries less than 3000 and makes a new array
+.map( (salary)=>salary*1.1 ) // manipulate each element of the new array
+.reduce ( (total,x)=> total + x,0); // reduce and get total of new array elements
+console.log(totalSalary);
+
+
+
+
+
+</script>
+
+</body>
+</html>
