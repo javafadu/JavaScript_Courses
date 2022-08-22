@@ -3,4 +3,4 @@ export const students = [
     { id: 2, name: "Veli", point: 32 },
     { id: 3, name: "Fatma", point: 56 },
     { id: 4, name: "Ahmet", point: 76 },
-  ];
+  ]; 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="menu">
+        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, vitae impedit. Amet nobis
+            velit fuga totam nemo? Voluptatum tempore vel sit, nemo harum recusandae, quia nulla obcaecati quasi nostrum
+            nihil!</p>
+        <ul>
+            <li><a href="http://">Link1</a></li>
+            <li><a href="https://google.com" id="lnk">Link2</a></li>
+            <li><a href="http://">Link3</a></li>
+            <li><a href="http://">Link4</a></li>
+            <li><a href="http://">Link5</a></li>
+            <li><a href="http://">Link6</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.querySelector("#lnk").addEventListener("click", (e) => {
+            e.preventDefault(); // prevent default action
+            e.target.closest(".menu").querySelector(".desc").innerHTML ="Hello World"; // get closest parent element (menu) and find the child element (desc) and change inner
+        });
+
+
+
+        console.log(document.querySelector(".menu ul").children);
+
+        console.log(document.querySelector("#lnk").parentElement.parentElement);
+
+        console.log(document.querySelector("#lnk").parentElement.nextElementSibling);
+
+        console.log(document.querySelector("#lnk").parentElement.previousElementSibling);
+
+        
+
+    </script>
+
+
+</body>
+
+</html>
