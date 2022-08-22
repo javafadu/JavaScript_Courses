@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <style>
+        body{
+          background-image: url("https://images.pexels.com/photos/1227511/pexels-photo-1227511.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .icerik{
+          position:relative;
+          background-color: burlywood;
+          border:1px solid crimson;
+          border-radius:15px;
+          margin-top:10%;
+          width:100%;
+          height:80%;
+          text-align:center;
+        }
+        #geri,#ileri{
+          display:none; 
+        }
+        .alt{
+          display:none; 
+          position:absolute;
+          top:30%;
+          left:30%;
+          width:40%;
+          height:50%;
+          background-color: bisque;
+          border:1px solid black;
+        }
+      </style>
+
+  </head>
+  <body>
+    <div class="icerik">
+      <h1>BAŞLIK</h1>
+      <button id="btn"><i class="fa-solid fa-play"></i></button>
+      <div class="alt">
+        <h2 id="baslik">TARIK KAYA</h2>
+        <img
+          src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt=""
+          id="resim"
+          width="100px"
+          height="100px"
+        />
+        <p id="yas">53</p>
+        <p id="meslek">THE BOSS</p>
+        <button id="geri"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="ileri">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <script src="app2.js"></script>
+  </body>
+</html>
+
+<!-- https://images.pexels.com/photos/1227511/pexels-photo-1227511.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 -->
