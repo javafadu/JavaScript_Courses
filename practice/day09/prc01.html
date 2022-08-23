@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 100%;
+      }
+      .header {
+        margin: 2rem;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding-bottom: 5px;
+      }
+      .ürünler {
+        display: flex;
+      }
+      .basliklar {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+      }
+      .basliklar .active {
+        font-weight: 700;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Ürün Görselleri</h1>
+        <div class="basliklar">
+          <span class="ürün active" data-sec="all">Ürünler</span>
+          <span class="ürün" data-sec="shoe">Ayakkabı</span>
+          <span class="ürün" data-sec="bag">Çanta</span>
+          <span class="ürün" data-sec="headphone">Kulaklık</span>
+        </div>
+      </div>
+      <div class="ürünler">
+        <div class="image shoe">
+          <img
+            src="https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt=""
+          />
+        </div>
+        <div class="image shoe">
+          <img
+            src="https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt=""
+          />
+        </div>
+        <div class="image bag">
+          <img
+            src="https://images.pexels.com/photos/6649429/pexels-photo-6649429.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt=""
+          />
+        </div>
+        <div class="image bag">
+          <img
+            src="https://images.pexels.com/photos/4830923/pexels-photo-4830923.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt=""
+          />
+        </div>
+        <div class="image headphone">
+          <img
+            src="https://images.pexels.com/photos/1591/technology-music-sound-things.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt=""
+          />
+        </div>
+        <div class="image headphone">
+          <img
+            src="https://images.pexels.com/photos/815494/pexels-photo-815494.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <script src="app01.js"></script>
+  </body>
+</html>

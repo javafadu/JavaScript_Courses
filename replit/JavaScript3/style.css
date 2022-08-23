@@ -1,0 +1,11 @@
+body {
+    margin:10px 5px;
+    padding:10px;
+}
+
+.table td:nth-child(3), th:nth-child(3) {
+    text-align: center;
+}
+.table tr, td {
+    border:1px solid black;
+}
