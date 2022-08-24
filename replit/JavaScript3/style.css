@@ -2,10 +2,40 @@ body {
     margin:10px 5px;
     padding:10px;
 }
+.row {
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+.table {
+    
+    margin-top:5px;
+    border-collapse: collapse;
+    padding:0.5rem;
+}
+.table thead th{
+    background-color:rgb(39, 38, 38);
+    color:rgb(238, 234, 234);
+    padding:0.5rem;
+}
+.table th, .table td{
+    padding:0.5rem;
+}
 
 .table td:nth-child(3), th:nth-child(3) {
     text-align: center;
+    
 }
-.table tr, td {
-    border:1px solid black;
+.table tr, td , .table thead tr th{
+    border:2px solid white;
+    padding:0.5rem;
+    
 }
+.table tbody tr {
+    background-color: lightgray;
+}
+.table tbody tr:nth-child(even) {
+    background-color:#EFEFEF;
+}
+
