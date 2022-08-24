@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @font-face {
+            font-family: 'digital' ;
+            src: url('assets/font/digital-7.ttf');
+        }
+
+        .clock {
+            font-family: digital;
+            list-style: none;
+            margin:0;
+            padding:1rem;
+            display:flex;
+            font-size: 3rem;
+            background-color: antiquewhite;
+            border-radius: 25px;
+            justify-content: center;
+            color:brown;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+<ul class="clock">
+<li>23</li>
+<li>:</li>
+<li>34</li>
+</ul>
+
+<script>
+
+const elHour = document.querySelector(".clock li:first-child");
+const elMinute = document.querySelector(".clock li:last-child");
+const elSecond = document.querySelector(".clock li:nth-child(2)");
+
+console.log(elHour);
+
+const tick = () => { 
+    const dateTime = new Date();
+    let hour=dateTime.getHours();
+    let minute=dateTime.getMinutes();
+
+
+    hour = hour<10 ? "0"+hour : hour;
+    minute = minute<10 ? "0"+minute : minute;
+
+    elHour.innerHTML=hour;
+    elMinute.innerHTML=minute;
+
+
+    elSecond.style.opacity = elSecond.style.opacity == 1 ? (elSecond.style.opacity =0):  (elSecond.style.opacity =1);
+    
+
+ };
+
+setInterval(tick, 1000);
+
+
+
+</script>
+
+</body>
+</html>
