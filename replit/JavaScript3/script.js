@@ -41,25 +41,16 @@ document.querySelector("#ekle").addEventListener("click", () => {
 document.querySelectorAll(".table tbody tr").forEach((satir) => {
   satir.addEventListener("click", () => {
     let nameSelect = satir.querySelector("td:nth-child(2").innerText;
-    nameGet(nameSelect);
+    putNameIntoInput(nameSelect);
   });
 });
 
 // ASAGI DUZELT
-const nameGet = (urunId) => {
-  const urun = urunler.filter((item) => item.urun_id == urunId)[0];
-  const urunHtml = `
-      <div class="card-body">
-          <div class="row">
-              <div class="col-md-6">
-              Urun Adi: ${urun.urun_adi}
-              </div>
-              <div class="col-md-6">
-              Urun Fiyat : ${urun.fiyat}
-              </div>
-          </div>
-      </div>        
+const putNameIntoInput = (nameSelect) => {
+
+  const nameInput = `
+  <input type="text" class="form-control" id="name" value="${nameSelect}">     
               `;
 
-  document.querySelector("#satis").innerHTML = urunHtml;
+ document.querySelector(".table tbody tr td:nth-child(2").innerHTML = na;
 };

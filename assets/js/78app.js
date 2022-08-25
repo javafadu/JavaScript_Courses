@@ -48,7 +48,7 @@ const loadStudents = () => {
         const result = confirm(`${name} record will be deleted, Are you sure to delete`);
     
         if(!result) return;
-ß
+
 
         row.querySelector("th").innerHTML = "<i class=\"fa-solid fa-spinner fa-spin-pulse\"></i>";
 
