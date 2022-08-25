@@ -28,14 +28,14 @@
     </div>
     <div class="col-sm-2">
       
-      <input type="text" class="form-control" id="point" placeholder="Point" required>
+      <input type="number" class="form-control" id="point" placeholder="Point" required>
       <div class="valid-feedback">
         Please enter a valid point
       </div>
     </div>
 
     <div class="col-sm-3">
-      <button class="btn btn-warning" type="submit">+ Add</button>
+      <input type="button" class="btn btn-warning" value="+ Add" id="ekle" />
     </div>
   </form>
 
@@ -51,37 +51,14 @@
         <th class="col-sm-3"></th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>John Coffee</td>
-        <td>80</td>
-        <td class="d-flex justify-content-around align-items-center p-3"><i class="fa-solid fa-pencil"></i><i class="fa-solid fa-trash-can"></i></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Walter white</td>
-        <td>90</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Batman Forever</td>
-        <td>70</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Elton John</td>
-        <td>70</td>
-        <td></td>
-      </tr>
+    <tbody id="rowData">
+     
     
     </tbody>
     <tfoot>
       <tr>
         <td colspan="2" style="text-align:right">Average</td>
-        <td style="text-align:center">80</td>
+        <td style="text-align:center"></td>
         <td></td>
       </tr>
     </tfoot>
