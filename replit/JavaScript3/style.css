@@ -1,7 +1,12 @@
 body {
     margin:10px 5px;
     padding:10px;
-}
+    height:100vh;
+  }
+  .pink {
+    background-color: pink;
+  }
+
 .row {
     margin:0;
     padding:0;
@@ -43,4 +48,16 @@ body {
     border:2px solid white;
     padding:0.5rem;
 }
+.table tbody tr td:nth-child(4) {
+    display:flex;
+    justify-content:space-around;
+}
+.editRow{
+    display:flex;
+    justify-content:space-around;
+}
+
+
+
+
 
